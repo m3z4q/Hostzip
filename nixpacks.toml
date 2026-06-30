@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["unzip"]
+
+[phases.install]
+cmds = [
+  "unzip -o host.zip",
+  "cd host && pip install -r requirements.txt"
+]
+
+[start]
+cmd = "sh start.sh"
